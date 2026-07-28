@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paldam — Software for Founders</title>
-    <meta name="description" content="Paldam builds focused software tools for independent founders and small SaaS teams. Home of PayDam — automatic failed payment recovery for Stripe." />
+    <title>Paldam — Independent Software Company</title>
+    <meta name="description" content="Paldam builds focused software tools that each solve one problem well. Home of PayDam — failed Stripe payment recovery — and CivicRecordsOnline — public records request software for city clerks. More products in development." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://paldam.com/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://paldam.com/" />
-    <meta property="og:title" content="Paldam — Software for Founders" />
-    <meta property="og:description" content="Paldam builds focused software tools for independent founders and small SaaS teams. Home of PayDam — automatic failed payment recovery for Stripe." />
+    <meta property="og:title" content="Paldam — Independent Software Company" />
+    <meta property="og:description" content="Paldam builds focused software tools that each solve one problem well. Home of PayDam — failed Stripe payment recovery — and CivicRecordsOnline — public records request software for city clerks. More products in development." />
     <meta property="og:site_name" content="Paldam" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Paldam — Software for Founders" />
-    <meta name="twitter:description" content="Paldam builds focused software tools for independent founders and small SaaS teams. Home of PayDam — automatic failed payment recovery for Stripe." />
+    <meta name="twitter:title" content="Paldam — Independent Software Company" />
+    <meta name="twitter:description" content="Paldam builds focused software tools that each solve one problem well. Home of PayDam — failed Stripe payment recovery — and CivicRecordsOnline — public records request software for city clerks. More products in development." />
 
     <!-- JSON-LD: Organization -->
     <script type="application/ld+json">
@@ -30,7 +30,7 @@
         "legalName": "Paldam LLC",
         "url": "https://paldam.com",
         "email": "info@paldam.com",
-        "description": "Paldam LLC is a California limited liability company that builds focused software tools for independent founders and small SaaS teams.",
+        "description": "Paldam LLC is a California limited liability company that builds focused software tools, each one solving a single problem well.",
         "foundingDate": "2026",
         "address": {
             "@type": "PostalAddress",
@@ -71,6 +71,23 @@
     }
     </script>
 
+    <!-- JSON-LD: SoftwareApplication (CivicRecordsOnline) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "CivicRecordsOnline",
+        "url": "https://www.civicrecordsonline.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Public records request software for city clerks and records staff. CivicRecordsOnline tracks response deadlines for all 50 states, redacts sensitive information before records are released, and gives the public a portal to submit requests and check status.",
+        "offers": {
+            "@type": "Offer",
+            "description": "14-day free trial. Monthly subscription tiers from $99 to $499 per month, with redaction and the public portal included in every tier."
+        }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -99,10 +116,9 @@
         </button>
 
         <ul class="nav-links" id="nav-menu" role="navigation">
-            <li><a href="#products">Products</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="https://paydam.app" class="nav-cta" target="_blank" rel="noopener">Go to PayDam</a></li>
+            <li><a href="#products" class="nav-cta">Our products</a></li>
         </ul>
     </div>
 </header>
@@ -113,10 +129,11 @@
 <main id="main">
 <section class="hero">
     <img src="/wordmark.png" alt="Paldam" class="hero-wordmark" width="280" height="56" />
-    <h1>Software built for<br /><em>independent founders</em></h1>
+    <h1>Software built to<br /><em>do one thing well</em></h1>
     <p class="hero-sub">
-        We build focused, no-nonsense tools that solve real problems for
-        SaaS founders and small teams — without the enterprise bloat.
+        We build focused, no-nonsense tools that solve real problems —
+        for SaaS founders and for the people who run city hall — without
+        the enterprise bloat.
     </p>
     <div class="hero-actions">
         <a href="#products" class="btn btn-primary">See our products</a>
@@ -154,15 +171,32 @@
                 </a>
             </div>
 
+            <!-- CivicRecordsOnline -->
+            <div class="product-card product-card-live">
+                <span class="product-badge badge-live">Live</span>
+                <img src="https://www.civicrecordsonline.com/favicon.png" alt="CivicRecordsOnline icon" class="product-icon" width="52" height="52" loading="lazy" />
+                <div class="product-name">CivicRecordsOnline</div>
+                <p class="product-desc">
+                    Public records request software for city clerks. Track response
+                    deadlines across all 50 states, black out sensitive information
+                    before records go out, and give residents a portal to file
+                    requests and check status — with the price on the page.
+                </p>
+                <a href="https://www.civicrecordsonline.com" class="product-link product-link-arrow" target="_blank" rel="noopener">
+                    Visit CivicRecordsOnline.com
+                </a>
+            </div>
+
             <!-- Future products slot -->
             <div class="product-card">
                 <span class="product-badge badge-soon">Coming soon</span>
                 <div class="product-icon-placeholder" aria-hidden="true">&#9881;&#65039;</div>
                 <div class="product-name">More tools in development</div>
                 <p class="product-desc">
-                    Several new products are in the works — each one focused
-                    on a specific problem founders actually run into. Drop us
-                    a line and we'll let you know when they ship.
+                    Several more products are in the works, each built the same
+                    way: one clear problem, a fair price, and no sales call to
+                    get started. Drop us a line and we'll let you know when
+                    they ship.
                 </p>
                 <a href="#contact" class="product-link">Get notified</a>
             </div>
@@ -224,8 +258,8 @@
                         <div class="about-stat-lbl">Founded</div>
                     </div>
                     <div class="about-stat">
-                        <div class="about-stat-num">1</div>
-                        <div class="about-stat-lbl">Live product</div>
+                        <div class="about-stat-num">2</div>
+                        <div class="about-stat-lbl">Live products</div>
                     </div>
                     <div class="about-stat">
                         <div class="about-stat-num">100%</div>
@@ -270,6 +304,7 @@
 
         <ul class="footer-links">
             <li><a href="https://paydam.app" target="_blank" rel="noopener">PayDam</a></li>
+            <li><a href="https://www.civicrecordsonline.com" target="_blank" rel="noopener">CivicRecordsOnline</a></li>
             <li><a href="mailto:info@paldam.com">Contact</a></li>
         </ul>
 
