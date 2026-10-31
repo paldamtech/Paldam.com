@@ -6,6 +6,7 @@
     <title>Paldam LLC — Public records software for local government</title>
     <meta name="description" content="Paldam LLC is a software company in Sacramento, California. It builds CivicRecordsOnline, public records request software for local government, and PayDam, failed Stripe payment recovery for subscription businesses." />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffd43b" />
     <link rel="canonical" href="https://paldam.com/" />
 
     <meta property="og:type" content="website" />
@@ -72,7 +73,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNQLX96MKZ"></script>
@@ -82,15 +83,14 @@
 
 <a href="#main" class="skip-link">Skip to main content</a>
 
-<header class="nav">
-    <div class="nav-inner">
-        <a href="/" class="nav-brand" aria-label="Paldam home">
-            <img src="/icon.png" alt="" class="nav-brand-icon" width="32" height="32" />
-            Paldam
+<header class="topbar">
+    <div class="wrap topbar-inner">
+        <a href="/" class="brand" aria-label="Paldam home">
+            <img src="/icon.png" alt="" class="brand-icon" width="30" height="30" />
+            <span class="brand-name">Paldam<span class="dot" aria-hidden="true">.</span></span>
         </a>
-
         <nav aria-label="Main">
-            <ul class="nav-links">
+            <ul class="topnav">
                 <li><a href="#products">Products</a></li>
                 <li><a href="#security">Security</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -100,144 +100,202 @@
 </header>
 
 <main id="main">
-<section class="hero" aria-labelledby="hero-title">
-    <img src="/wordmark.png" alt="Paldam" class="hero-wordmark" width="280" height="56" />
-    <h1 id="hero-title">Public records software<br /><em>for local government</em></h1>
-    <p class="hero-sub">
-        Paldam LLC is a software company in Sacramento, California. Our main
-        product, CivicRecordsOnline, helps city clerks and records staff
-        receive, track and answer public records requests.
-    </p>
-    <div class="hero-actions">
-        <a href="https://www.civicrecordsonline.com" class="btn btn-primary">Visit CivicRecordsOnline</a>
-        <a href="#security" class="btn btn-ghost">Security and IT questions</a>
+
+<section class="hero grid-bg" aria-labelledby="hero-title">
+    <div class="wrap hero-inner">
+        <div class="hero-copy">
+            <p class="eyebrow">Paldam LLC · Sacramento, California</p>
+            <h1 id="hero-title" class="display">
+                Public records software for
+                <span class="mark">local government</span><span class="dot" aria-hidden="true">.</span>
+            </h1>
+            <p class="lede">
+                Our main product, CivicRecordsOnline, helps city clerks and
+                records staff receive, track and answer public records requests.
+            </p>
+            <div class="actions">
+                <a href="https://www.civicrecordsonline.com" class="btn btn-ink">Visit CivicRecordsOnline</a>
+                <a href="#security" class="btn btn-paper">Security and IT questions</a>
+            </div>
+        </div>
+
+        <figure class="term hero-term" aria-labelledby="term-caption">
+            <div class="term-bar" aria-hidden="true">
+                <span class="term-dots"><i></i><i></i><i></i></span>
+                <span class="term-title">bash</span>
+            </div>
+<pre class="term-body"><code><span class="t-prompt">$</span> curl -I https://paldam.com
+<span class="t-ok">HTTP/1.1 200 OK</span>
+<span class="t-key">strict-transport-security:</span> max-age=31536000
+<span class="t-key">content-security-policy:</span> default-src 'none'; frame-ancestors 'none'
+<span class="t-key">x-frame-options:</span> DENY
+<span class="t-key">x-content-type-options:</span> nosniff
+<span class="t-key">referrer-policy:</span> strict-origin-when-cross-origin
+<span class="t-prompt">$</span> <span class="t-cursor" aria-hidden="true"></span></code></pre>
+            <figcaption id="term-caption" class="term-caption">The security headers this page is served with (CSP shortened).</figcaption>
+        </figure>
     </div>
 </section>
 
+<div class="ticker" aria-label="Facts about CivicRecordsOnline">
+    <ul class="ticker-track">
+        <li>Hosted on Microsoft Azure in US regions</li>
+        <li>Encrypted at rest and in transit</li>
+        <li>Prices published on the website</li>
+        <li>Vulnerability disclosure policy</li>
+        <li>security.txt at /.well-known</li>
+        <li aria-hidden="true">Hosted on Microsoft Azure in US regions</li>
+        <li aria-hidden="true">Encrypted at rest and in transit</li>
+        <li aria-hidden="true">Prices published on the website</li>
+        <li aria-hidden="true">Vulnerability disclosure policy</li>
+        <li aria-hidden="true">security.txt at /.well-known</li>
+    </ul>
+</div>
+
 <section class="section" id="products" aria-labelledby="products-title">
-    <div class="section-inner">
-        <p class="section-eyebrow">Products</p>
-        <h2 class="section-h2" id="products-title">What we build</h2>
-        <p class="section-body">
-            Each product does one job and lists its prices on its own website.
-            More products are in development.
-        </p>
+    <div class="wrap">
+        <p class="eyebrow">Products</p>
+        <h2 id="products-title" class="display display-2">What we build<span class="dot" aria-hidden="true">.</span></h2>
+        <p class="section-lede">Each product does one job and lists its prices on its own website. More products are in development.</p>
 
-        <div class="products-grid">
-
-            <article class="product-card product-card-lead">
-                <img src="https://www.civicrecordsonline.com/favicon.png" alt="" class="product-icon" width="52" height="52" />
-                <h3 class="product-name">CivicRecordsOnline</h3>
-                <p class="product-desc">
+        <div class="cards cards-2">
+            <article class="card card-teal">
+                <div class="card-head">
+                    <span class="card-num">01</span>
+                    <span class="tag">Local government</span>
+                </div>
+                <img src="https://www.civicrecordsonline.com/favicon.png" alt="" class="card-icon" width="56" height="56" />
+                <h3 class="card-title">CivicRecordsOnline</h3>
+                <p class="card-text">
                     Public records request software for local government. It
                     tracks response deadlines under each state's law, helps
                     staff black out private details before records are
                     released, and gives the public a portal to submit requests
                     and check their status.
                 </p>
-                <a href="https://www.civicrecordsonline.com" class="product-link product-link-arrow">
-                    Visit civicrecordsonline.com
-                </a>
+                <a href="https://www.civicrecordsonline.com" class="card-link">civicrecordsonline.com</a>
             </article>
 
-            <article class="product-card">
-                <img src="https://paydam.app/favicon.png" alt="" class="product-icon" width="52" height="52" />
-                <h3 class="product-name">PayDam</h3>
-                <p class="product-desc">
+            <article class="card card-yellow">
+                <div class="card-head">
+                    <span class="card-num">02</span>
+                    <span class="tag">Subscription billing</span>
+                </div>
+                <img src="https://paydam.app/favicon.png" alt="" class="card-icon" width="56" height="56" />
+                <h3 class="card-title">PayDam</h3>
+                <p class="card-text">
                     Failed payment recovery for subscription businesses that
                     bill through Stripe. PayDam watches a connected Stripe
                     account for failed invoices and emails customers a short
                     series of reminders to update their payment details.
                 </p>
-                <a href="https://paydam.app" class="product-link product-link-arrow">
-                    Visit paydam.app
-                </a>
+                <a href="https://paydam.app" class="card-link">paydam.app</a>
             </article>
-
         </div>
     </div>
 </section>
 
-<section class="section section-alt" id="security" aria-labelledby="security-title">
-    <div class="section-inner">
-        <p class="section-eyebrow">Security</p>
-        <h2 class="section-h2" id="security-title">Security and IT review</h2>
-        <p class="section-body">
-            If you are reviewing CivicRecordsOnline for your agency, start
-            with the For IT page. It covers hosting, encryption, data retention
-            and data export in one place. CivicRecordsOnline runs on Microsoft
-            Azure in US regions, and agency data is encrypted at rest and in
-            transit.
+<section class="section section-paper grid-bg" id="security" aria-labelledby="security-title">
+    <div class="wrap">
+        <p class="eyebrow">Security</p>
+        <h2 id="security-title" class="display display-2">Security and IT review<span class="dot" aria-hidden="true">.</span></h2>
+        <p class="section-lede">
+            If you are reviewing CivicRecordsOnline for your agency, start with
+            the For IT page. It covers hosting, encryption, data retention and
+            data export in one place. CivicRecordsOnline runs on Microsoft Azure
+            in US regions, and agency data is encrypted at rest and in transit.
         </p>
 
-        <ul class="security-list">
-            <li class="security-item">
-                <h3>For IT and security reviewers</h3>
-                <p>Hosting, encryption, data retention, data export and subprocessors.</p>
-                <a href="https://www.civicrecordsonline.com/for-it" class="product-link product-link-arrow">Read the For IT page</a>
+        <ul class="cards cards-3">
+            <li class="card win">
+                <div class="term-bar" aria-hidden="true">
+                    <span class="term-dots"><i></i><i></i><i></i></span>
+                    <span class="term-title">for-it</span>
+                </div>
+                <div class="win-body">
+                    <h3 class="card-title">For IT and security reviewers</h3>
+                    <p class="card-text">Hosting, encryption, data retention, data export and subprocessors.</p>
+                    <a href="https://www.civicrecordsonline.com/for-it" class="card-link">Read the For IT page</a>
+                </div>
             </li>
-            <li class="security-item">
-                <h3>Security questions</h3>
-                <p>Questionnaires and security questions about CivicRecordsOnline.</p>
-                <a href="mailto:security@civicrecordsonline.com" class="product-link">security@civicrecordsonline.com</a>
+            <li class="card win">
+                <div class="term-bar" aria-hidden="true">
+                    <span class="term-dots"><i></i><i></i><i></i></span>
+                    <span class="term-title">mail</span>
+                </div>
+                <div class="win-body">
+                    <h3 class="card-title">Security questions</h3>
+                    <p class="card-text">Questionnaires and security questions about CivicRecordsOnline.</p>
+                    <a href="mailto:security@civicrecordsonline.com" class="card-link card-link-mail">security@civicrecordsonline.com</a>
+                </div>
             </li>
-            <li class="security-item">
-                <h3>Report a vulnerability</h3>
-                <p>How to report a security issue, and what to expect after you do.</p>
-                <a href="https://www.civicrecordsonline.com/security" class="product-link product-link-arrow">Vulnerability disclosure policy</a>
+            <li class="card win">
+                <div class="term-bar" aria-hidden="true">
+                    <span class="term-dots"><i></i><i></i><i></i></span>
+                    <span class="term-title">disclosure</span>
+                </div>
+                <div class="win-body">
+                    <h3 class="card-title">Report a vulnerability</h3>
+                    <p class="card-text">How to report a security issue, and what to expect after you do.</p>
+                    <a href="https://www.civicrecordsonline.com/security" class="card-link">Vulnerability disclosure policy</a>
+                </div>
             </li>
         </ul>
     </div>
 </section>
 
 <section class="section" id="about" aria-labelledby="about-title">
-    <div class="section-inner">
-        <p class="section-eyebrow">About</p>
-        <h2 class="section-h2" id="about-title">About Paldam LLC</h2>
-        <p class="section-body">
+    <div class="wrap">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title" class="display display-2">About Paldam LLC<span class="dot" aria-hidden="true">.</span></h2>
+        <p class="section-lede">
             Paldam LLC is an independent software company based in Sacramento,
             California. It builds and operates CivicRecordsOnline and PayDam.
         </p>
 
-        <ul class="about-values">
-            <li>
-                <strong>One job per product</strong>
-                <span>Each product is built around a single task, such as answering public records requests.</span>
+        <ol class="values">
+            <li class="value">
+                <span class="value-num" aria-hidden="true">01</span>
+                <h3 class="value-title">One job per product</h3>
+                <p class="card-text">Each product is built around a single task, such as answering public records requests.</p>
             </li>
-            <li>
-                <strong>Prices on the page</strong>
-                <span>Each product's website lists what it costs. You do not need a sales call to find out.</span>
+            <li class="value">
+                <span class="value-num" aria-hidden="true">02</span>
+                <h3 class="value-title">Prices on the page</h3>
+                <p class="card-text">Each product's website lists what it costs. You do not need a sales call to find out.</p>
             </li>
-            <li>
-                <strong>Privacy by default</strong>
-                <span>We collect only what we need to run each product. We do not sell data.</span>
+            <li class="value">
+                <span class="value-num" aria-hidden="true">03</span>
+                <h3 class="value-title">Privacy by default</h3>
+                <p class="card-text">We collect only what we need to run each product. We do not sell data.</p>
             </li>
-        </ul>
+        </ol>
     </div>
 </section>
 
-<section class="section section-alt" id="contact" aria-labelledby="contact-title">
-    <div class="section-inner">
-        <div class="contact-card">
-            <h2 id="contact-title">Contact</h2>
-            <p>
+<section class="section section-contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+        <div class="contact">
+            <p class="eyebrow eyebrow-ink">Contact</p>
+            <h2 id="contact-title" class="display display-2">Write to us<span class="dot dot-ink" aria-hidden="true">.</span></h2>
+            <p class="contact-text">
                 Questions about Paldam LLC or its products. For security
                 questions about CivicRecordsOnline, write to
-                security@civicrecordsonline.com.
+                <a href="mailto:security@civicrecordsonline.com">security@civicrecordsonline.com</a>.
             </p>
-            <a href="mailto:info@paldam.com" class="contact-email">info@paldam.com</a>
+            <a href="mailto:info@paldam.com" class="btn btn-ink btn-big">info@paldam.com</a>
         </div>
     </div>
 </section>
+
 </main>
 
 <footer class="footer">
-    <div class="footer-inner">
+    <div class="wrap footer-inner">
         <div class="footer-brand">
-            <img src="/icon_white.png" alt="" class="footer-brand-icon" width="26" height="26" />
-            Paldam LLC
+            <img src="/icon_white.png" alt="" width="26" height="26" />
+            <span>Paldam LLC</span>
         </div>
-
         <nav aria-label="Footer">
             <ul class="footer-links">
                 <li><a href="https://www.civicrecordsonline.com">CivicRecordsOnline</a></li>
@@ -246,10 +304,9 @@
                 <li><a href="mailto:info@paldam.com">Contact</a></li>
             </ul>
         </nav>
-
         <span class="footer-copy">&copy; 2026 Paldam LLC</span>
     </div>
-    <div class="footer-legal">
+    <div class="wrap footer-legal">
         Paldam LLC, a California limited liability company<br />
         2108 N Street #1668<br />
         Sacramento, CA 95816
