@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paldam — Independent Software Company</title>
-    <meta name="description" content="Paldam builds focused software tools that each solve one problem well. Home of PayDam — failed Stripe payment recovery — and CivicRecordsOnline — public records request software for city clerks. More products in development." />
+    <title>Paldam LLC — Public records software for local government</title>
+    <meta name="description" content="Paldam LLC is a software company in Sacramento, California. It builds CivicRecordsOnline, public records request software for local government, and PayDam, failed Stripe payment recovery for subscription businesses." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://paldam.com/" />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://paldam.com/" />
-    <meta property="og:title" content="Paldam — Independent Software Company" />
-    <meta property="og:description" content="Paldam builds focused software tools that each solve one problem well. Home of PayDam — failed Stripe payment recovery — and CivicRecordsOnline — public records request software for city clerks. More products in development." />
+    <meta property="og:title" content="Paldam LLC — Public records software for local government" />
+    <meta property="og:description" content="Paldam LLC is a software company in Sacramento, California. It builds CivicRecordsOnline, public records request software for local government, and PayDam, failed Stripe payment recovery for subscription businesses." />
     <meta property="og:site_name" content="Paldam" />
     <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Paldam — Independent Software Company" />
-    <meta name="twitter:description" content="Paldam builds focused software tools that each solve one problem well. Home of PayDam — failed Stripe payment recovery — and CivicRecordsOnline — public records request software for city clerks. More products in development." />
+    <meta name="twitter:title" content="Paldam LLC — Public records software for local government" />
+    <meta name="twitter:description" content="Paldam LLC is a software company in Sacramento, California. It builds CivicRecordsOnline, public records request software for local government, and PayDam, failed Stripe payment recovery for subscription businesses." />
 
-    <!-- JSON-LD: Organization -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -30,13 +27,12 @@
         "legalName": "Paldam LLC",
         "url": "https://paldam.com",
         "email": "info@paldam.com",
-        "description": "Paldam LLC is a California limited liability company that builds focused software tools, each one solving a single problem well.",
+        "description": "Paldam LLC is a California limited liability company in Sacramento that builds CivicRecordsOnline, public records request software for local government, and PayDam.",
         "foundingDate": "2026",
         "sameAs": []
     }
     </script>
 
-    <!-- JSON-LD: WebSite -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -46,24 +42,6 @@
     }
     </script>
 
-    <!-- JSON-LD: SoftwareApplication (PayDam) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "PayDam",
-        "url": "https://paydam.app",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "description": "Automatic failed Stripe payment recovery for SaaS. PayDam monitors your connected Stripe account for failed invoices and sends a branded recovery email sequence to your customers, while Stripe Smart Retries handles the charge retries — reducing involuntary churn.",
-        "offers": {
-            "@type": "Offer",
-            "description": "14-day free trial, no credit card required. Monthly subscription tiers (Starter, Pro, Scale) plus a recovery success fee."
-        }
-    }
-    </script>
-
-    <!-- JSON-LD: SoftwareApplication (CivicRecordsOnline) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -72,211 +50,180 @@
         "url": "https://www.civicrecordsonline.com",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "description": "Public records request software for city clerks and records staff. CivicRecordsOnline tracks response deadlines for all 50 states, redacts sensitive information before records are released, and gives the public a portal to submit requests and check status.",
+        "description": "Public records request software for local government. CivicRecordsOnline tracks response deadlines under each state's law, helps staff black out private details before records are released, and gives the public a portal to submit requests and check their status.",
         "offers": {
             "@type": "Offer",
-            "description": "14-day free trial. Monthly subscription tiers from $99 to $499 per month, with redaction and the public portal included in every tier."
+            "description": "Free trial for government agencies. Monthly subscription tiers from $99 to $499 per month, with redaction and the public portal included in every tier."
         }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "PayDam",
+        "url": "https://paydam.app",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Failed Stripe payment recovery for subscription businesses. PayDam watches a connected Stripe account for failed invoices and emails customers a short series of reminders to update their payment details."
     }
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNQLX96MKZ"></script>
+    <script src="/js/analytics.js"></script>
 </head>
 <body>
 
-<!-- Skip to content (a11y) -->
 <a href="#main" class="skip-link">Skip to main content</a>
 
-<!-- ══════════════════════════════════════════════════════════
-     NAV
-══════════════════════════════════════════════════════════ -->
-<header class="nav" role="banner">
+<header class="nav">
     <div class="nav-inner">
         <a href="/" class="nav-brand" aria-label="Paldam home">
             <img src="/icon.png" alt="" class="nav-brand-icon" width="32" height="32" />
             Paldam
         </a>
 
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-        </button>
-
-        <ul class="nav-links" id="nav-menu" role="navigation">
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#products" class="nav-cta">Our products</a></li>
-        </ul>
+        <nav aria-label="Main">
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
-<!-- ══════════════════════════════════════════════════════════
-     HERO
-══════════════════════════════════════════════════════════ -->
 <main id="main">
-<section class="hero">
+<section class="hero" aria-labelledby="hero-title">
     <img src="/wordmark.png" alt="Paldam" class="hero-wordmark" width="280" height="56" />
-    <h1>Software built to<br /><em>do one thing well</em></h1>
+    <h1 id="hero-title">Public records software<br /><em>for local government</em></h1>
     <p class="hero-sub">
-        We build focused, no-nonsense tools that solve real problems —
-        for SaaS founders and for the people who run city hall — without
-        the enterprise bloat.
+        Paldam LLC is a software company in Sacramento, California. Our main
+        product, CivicRecordsOnline, helps city clerks and records staff
+        receive, track and answer public records requests.
     </p>
     <div class="hero-actions">
-        <a href="#products" class="btn btn-primary">See our products</a>
-        <a href="#about" class="btn btn-ghost">About Paldam</a>
+        <a href="https://www.civicrecordsonline.com" class="btn btn-primary">Visit CivicRecordsOnline</a>
+        <a href="#security" class="btn btn-ghost">Security and IT questions</a>
     </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════
-     PRODUCTS
-══════════════════════════════════════════════════════════ -->
-<section class="section" id="products">
+<section class="section" id="products" aria-labelledby="products-title">
     <div class="section-inner">
-        <div class="section-eyebrow">Products</div>
-        <h2 class="section-h2">Tools we ship</h2>
+        <p class="section-eyebrow">Products</p>
+        <h2 class="section-h2" id="products-title">What we build</h2>
         <p class="section-body">
-            Each product is a standalone tool focused on one problem.
-            No suites, no bundles — just software that does one thing well.
+            Each product does one job and lists its prices on its own website.
+            More products are in development.
         </p>
 
         <div class="products-grid">
 
-            <!-- PayDam -->
-            <div class="product-card product-card-live">
-                <span class="product-badge badge-live">Live</span>
-                <img src="https://paydam.app/favicon.png" alt="PayDam icon" class="product-icon" width="52" height="52" loading="lazy" />
-                <div class="product-name">PayDam</div>
+            <article class="product-card product-card-lead">
+                <img src="https://www.civicrecordsonline.com/favicon.png" alt="" class="product-icon" width="52" height="52" />
+                <h3 class="product-name">CivicRecordsOnline</h3>
                 <p class="product-desc">
-                    Automatic failed Stripe payment recovery. PayDam monitors your
-                    connected Stripe account for failed invoices and sends a branded
-                    recovery email sequence to your customers — so you win back
-                    revenue you'd otherwise write off as involuntary churn.
+                    Public records request software for local government. It
+                    tracks response deadlines under each state's law, helps
+                    staff black out private details before records are
+                    released, and gives the public a portal to submit requests
+                    and check their status.
                 </p>
-                <a href="https://paydam.app" class="product-link product-link-arrow" target="_blank" rel="noopener">
-                    Visit PayDam.app
+                <a href="https://www.civicrecordsonline.com" class="product-link product-link-arrow">
+                    Visit civicrecordsonline.com
                 </a>
-            </div>
+            </article>
 
-            <!-- CivicRecordsOnline -->
-            <div class="product-card product-card-live">
-                <span class="product-badge badge-live">Live</span>
-                <img src="https://www.civicrecordsonline.com/favicon.png" alt="CivicRecordsOnline icon" class="product-icon" width="52" height="52" loading="lazy" />
-                <div class="product-name">CivicRecordsOnline</div>
+            <article class="product-card">
+                <img src="https://paydam.app/favicon.png" alt="" class="product-icon" width="52" height="52" />
+                <h3 class="product-name">PayDam</h3>
                 <p class="product-desc">
-                    Public records request software for city clerks. Track response
-                    deadlines across all 50 states, black out sensitive information
-                    before records go out, and give residents a portal to file
-                    requests and check status — with the price on the page.
+                    Failed payment recovery for subscription businesses that
+                    bill through Stripe. PayDam watches a connected Stripe
+                    account for failed invoices and emails customers a short
+                    series of reminders to update their payment details.
                 </p>
-                <a href="https://www.civicrecordsonline.com" class="product-link product-link-arrow" target="_blank" rel="noopener">
-                    Visit CivicRecordsOnline.com
+                <a href="https://paydam.app" class="product-link product-link-arrow">
+                    Visit paydam.app
                 </a>
-            </div>
-
-            <!-- Future products slot -->
-            <div class="product-card">
-                <span class="product-badge badge-soon">Coming soon</span>
-                <div class="product-icon-placeholder" aria-hidden="true">&#9881;&#65039;</div>
-                <div class="product-name">More tools in development</div>
-                <p class="product-desc">
-                    Several more products are in the works, each built the same
-                    way: one clear problem, a fair price, and no sales call to
-                    get started. Drop us a line and we'll let you know when
-                    they ship.
-                </p>
-                <a href="#contact" class="product-link">Get notified</a>
-            </div>
+            </article>
 
         </div>
     </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════
-     ABOUT
-══════════════════════════════════════════════════════════ -->
-<section class="section section-alt" id="about">
+<section class="section section-alt" id="security" aria-labelledby="security-title">
     <div class="section-inner">
-        <div class="about-grid">
-            <div>
-                <div class="section-eyebrow">About</div>
-                <h2 class="section-h2">Small company,<br />deliberate products</h2>
-                <p class="section-body">
-                    Paldam LLC is an independent software company based in
-                    Sacramento, California. We're not chasing venture scale —
-                    we're building useful tools, charging fair prices, and
-                    staying profitable without outside funding.
-                </p>
-                <p class="section-body" style="margin-top:1rem;">
-                    Every product we ship solves a problem we've felt ourselves.
-                    No roadmap theater, no engagement metrics — just software
-                    that earns its keep.
-                </p>
+        <p class="section-eyebrow">Security</p>
+        <h2 class="section-h2" id="security-title">Security and IT review</h2>
+        <p class="section-body">
+            If you are reviewing CivicRecordsOnline for your agency, start
+            with the For IT page. It covers hosting, encryption, data retention
+            and data export in one place. CivicRecordsOnline runs on Microsoft
+            Azure in US regions, and agency data is encrypted at rest and in
+            transit.
+        </p>
 
-                <div class="about-values">
-                    <div class="about-value">
-                        <div class="about-value-icon" aria-hidden="true">&#127919;</div>
-                        <div class="about-value-text">
-                            <strong>One problem per product</strong>
-                            <span>We don't build platforms. We build tools that do one thing well and get out of the way.</span>
-                        </div>
-                    </div>
-                    <div class="about-value">
-                        <div class="about-value-icon" aria-hidden="true">&#9889;</div>
-                        <div class="about-value-text">
-                            <strong>Ship fast, iterate faster</strong>
-                            <span>We move quickly and fix things. Imperfect and running beats perfect and vaporware.</span>
-                        </div>
-                    </div>
-                    <div class="about-value">
-                        <div class="about-value-icon" aria-hidden="true">&#128274;</div>
-                        <div class="about-value-text">
-                            <strong>Privacy by default</strong>
-                            <span>We only collect what we need to run the product. No selling data, no dark patterns.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="about-stat-grid">
-                    <div class="about-stat">
-                        <div class="about-stat-num">2026</div>
-                        <div class="about-stat-lbl">Founded</div>
-                    </div>
-                    <div class="about-stat">
-                        <div class="about-stat-num">2</div>
-                        <div class="about-stat-lbl">Live products</div>
-                    </div>
-                    <div class="about-stat">
-                        <div class="about-stat-num">100%</div>
-                        <div class="about-stat-lbl">Bootstrapped</div>
-                    </div>
-                    <div class="about-stat">
-                        <div class="about-stat-num">$0</div>
-                        <div class="about-stat-lbl">Outside funding</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ul class="security-list">
+            <li class="security-item">
+                <h3>For IT and security reviewers</h3>
+                <p>Hosting, encryption, data retention, data export and subprocessors.</p>
+                <a href="https://www.civicrecordsonline.com/for-it" class="product-link product-link-arrow">Read the For IT page</a>
+            </li>
+            <li class="security-item">
+                <h3>Security questions</h3>
+                <p>Questionnaires and security questions about CivicRecordsOnline.</p>
+                <a href="mailto:security@civicrecordsonline.com" class="product-link">security@civicrecordsonline.com</a>
+            </li>
+            <li class="security-item">
+                <h3>Report a vulnerability</h3>
+                <p>How to report a security issue, and what to expect after you do.</p>
+                <a href="https://www.civicrecordsonline.com/security" class="product-link product-link-arrow">Vulnerability disclosure policy</a>
+            </li>
+        </ul>
     </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════
-     CONTACT
-══════════════════════════════════════════════════════════ -->
-<section class="section" id="contact">
+<section class="section" id="about" aria-labelledby="about-title">
+    <div class="section-inner">
+        <p class="section-eyebrow">About</p>
+        <h2 class="section-h2" id="about-title">About Paldam LLC</h2>
+        <p class="section-body">
+            Paldam LLC is an independent software company based in Sacramento,
+            California. It builds and operates CivicRecordsOnline and PayDam.
+        </p>
+
+        <ul class="about-values">
+            <li>
+                <strong>One job per product</strong>
+                <span>Each product is built around a single task, such as answering public records requests.</span>
+            </li>
+            <li>
+                <strong>Prices on the page</strong>
+                <span>Each product's website lists what it costs. You do not need a sales call to find out.</span>
+            </li>
+            <li>
+                <strong>Privacy by default</strong>
+                <span>We collect only what we need to run each product. We do not sell data.</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="section section-alt" id="contact" aria-labelledby="contact-title">
     <div class="section-inner">
         <div class="contact-card">
-            <h2>Get in touch</h2>
+            <h2 id="contact-title">Contact</h2>
             <p>
-                Questions about our products, press inquiries, partnership ideas,
-                or just want to say hi — we read every email.
+                Questions about Paldam LLC or its products. For security
+                questions about CivicRecordsOnline, write to
+                security@civicrecordsonline.com.
             </p>
             <a href="mailto:info@paldam.com" class="contact-email">info@paldam.com</a>
         </div>
@@ -284,21 +231,21 @@
 </section>
 </main>
 
-<!-- ══════════════════════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════════════════════ -->
-<footer class="footer" role="contentinfo">
+<footer class="footer">
     <div class="footer-inner">
         <div class="footer-brand">
             <img src="/icon_white.png" alt="" class="footer-brand-icon" width="26" height="26" />
             Paldam LLC
         </div>
 
-        <ul class="footer-links">
-            <li><a href="https://paydam.app" target="_blank" rel="noopener">PayDam</a></li>
-            <li><a href="https://www.civicrecordsonline.com" target="_blank" rel="noopener">CivicRecordsOnline</a></li>
-            <li><a href="mailto:info@paldam.com">Contact</a></li>
-        </ul>
+        <nav aria-label="Footer">
+            <ul class="footer-links">
+                <li><a href="https://www.civicrecordsonline.com">CivicRecordsOnline</a></li>
+                <li><a href="https://paydam.app">PayDam</a></li>
+                <li><a href="https://www.civicrecordsonline.com/security">Report a vulnerability</a></li>
+                <li><a href="mailto:info@paldam.com">Contact</a></li>
+            </ul>
+        </nav>
 
         <span class="footer-copy">&copy; 2026 Paldam LLC</span>
     </div>
@@ -309,34 +256,5 @@
     </div>
 </footer>
 
-<script>
-// Mobile nav toggle
-(function() {
-    var btn = document.querySelector('.nav-toggle');
-    var menu = document.getElementById('nav-menu');
-    if (!btn || !menu) return;
-    btn.addEventListener('click', function() {
-        var open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        menu.classList.toggle('nav-links--open');
-    });
-    // Close menu when a link is clicked
-    menu.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', function() {
-            btn.setAttribute('aria-expanded', 'false');
-            menu.classList.remove('nav-links--open');
-        });
-    });
-})();
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNQLX96MKZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RNQLX96MKZ');
-</script>
 </body>
 </html>
