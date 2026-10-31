@@ -74,10 +74,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/style.css?v=20261031f" />
+    <link rel="stylesheet" href="/css/style.css?v=20261031k" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNQLX96MKZ"></script>
-    <script src="/js/analytics.js?v=20261031f"></script>
+    <script src="/js/analytics.js?v=20261031k"></script>
+    <script src="/js/deck.js?v=20261031k" defer></script>
 </head>
 <body>
 
@@ -115,27 +116,9 @@
             </div>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-            <div class="deck">
-                <div class="panel panel-back panel-back-2">
-                    <div class="panel-head">
-                        <span class="panel-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5.5h5V20"/></svg></span>
-                        <div>
-                            <p class="panel-name">Tenant Answers</p>
-                            <p class="panel-cat">In development</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-back panel-back-1">
-                    <div class="panel-head">
-                        <img src="/img/paydam-mark-white.png" alt="" width="32" height="32" class="panel-mark" />
-                        <div>
-                            <p class="panel-name">PayDam</p>
-                            <p class="panel-cat">Subscription billing</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-front">
+        <section class="hero-visual carousel" aria-roledescription="carousel" aria-label="PALDAM products">
+            <div class="deck" id="deck-slides" aria-live="off">
+                <article class="panel" data-pos="0" data-brand="cro" role="group" aria-roledescription="slide" aria-label="1 of 3: CivicRecordsOnline">
                     <div class="panel-head">
                         <img src="/img/cro-mark.png" alt="" width="44" height="44" class="panel-mark" />
                         <div>
@@ -143,16 +126,65 @@
                             <p class="panel-cat">Public sector software</p>
                         </div>
                     </div>
-                    <ul class="panel-list">
-                        <li>Request intake and tracking</li>
-                        <li>Response deadlines by state</li>
-                        <li>Redaction before release</li>
-                        <li>Public request portal</li>
-                    </ul>
-                    <p class="panel-foot">civicrecordsonline.com</p>
-                </div>
+                    <div class="panel-body">
+                        <ul class="panel-list">
+                            <li>Request intake and tracking</li>
+                            <li>Response deadlines by state</li>
+                            <li>Redaction before release</li>
+                            <li>Public request portal</li>
+                        </ul>
+                        <a href="https://www.civicrecordsonline.com" class="panel-foot">civicrecordsonline.com<span class="arrow" aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+                <article class="panel" data-pos="1" data-brand="paydam" role="group" aria-roledescription="slide" aria-label="2 of 3: PayDam" aria-hidden="true">
+                    <div class="panel-head">
+                        <img src="/img/paydam-mark-white.png" alt="" width="44" height="44" class="panel-mark" />
+                        <div>
+                            <p class="panel-name">PayDam</p>
+                            <p class="panel-cat">Subscription billing</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="panel-list">
+                            <li>Connects to your Stripe account</li>
+                            <li>Spots failed invoices</li>
+                            <li>Emails customers to update payment details</li>
+                            <li>Works alongside Stripe's own retries</li>
+                        </ul>
+                        <a href="https://paydam.app" class="panel-foot" tabindex="-1">paydam.app<span class="arrow" aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </article>
+                <article class="panel" data-pos="2" data-brand="ta" role="group" aria-roledescription="slide" aria-label="3 of 3: Tenant Answers" aria-hidden="true">
+                    <div class="panel-head">
+                        <span class="panel-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5.5h5V20"/></svg></span>
+                        <div>
+                            <p class="panel-name">Tenant Answers</p>
+                            <p class="panel-cat">Social housing &middot; In development</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="panel-list panel-list-planned">
+                            <li>STAIRs information requests</li>
+                            <li>Complaint Handling Code deadlines</li>
+                            <li>Subject access request deadlines</li>
+                            <li>Working days counted with bank holidays</li>
+                        </ul>
+                        <p class="panel-foot panel-foot-status">Being built for 1&nbsp;April&nbsp;2027</p>
+                    </div>
+                </article>
             </div>
-        </div>
+            <div class="deck-controls">
+                <div class="deck-tabs" role="group" aria-label="Choose a product" aria-controls="deck-slides">
+                    <button type="button" class="deck-tab" data-brand="cro" data-index="0" aria-pressed="true"><img src="/img/cro-mark.png" alt="" width="18" height="18" />CivicRecordsOnline</button>
+                    <button type="button" class="deck-tab" data-brand="paydam" data-index="1" aria-pressed="false"><img src="/img/paydam-mark-white.png" alt="" width="18" height="18" />PayDam</button>
+                    <button type="button" class="deck-tab" data-brand="ta" data-index="2" aria-pressed="false"><span class="deck-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5.5h5V20"/></svg></span>Tenant Answers</button>
+                </div>
+                <button type="button" class="deck-pause" aria-label="Pause automatic rotation">
+                    <svg class="icon-pause" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+                    <svg class="icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+                </button>
+            </div>
+        </section>
     </div>
 </section>
 
@@ -218,52 +250,79 @@
     </div>
 </section>
 
-<section class="section section-tint" id="security" aria-labelledby="security-title">
+<section class="section section-dark" id="security" aria-labelledby="security-title">
     <div class="container">
         <div class="section-head section-head-split">
             <div>
-                <p class="eyebrow">Security</p>
+                <p class="eyebrow eyebrow-dark">Security</p>
                 <h2 id="security-title">Security and technical information.</h2>
             </div>
             <p class="section-lede">
-                Review CivicRecordsOnline's security and IT documentation, or
-                contact us directly with technical questions.
+                How CivicRecordsOnline protects agency records, based on its
+                live configuration. Full details are on the For IT page.
             </p>
         </div>
 
-        <div class="security">
-            <article class="sec-feature">
-                <span class="sec-icon sec-icon-dark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 17h6"/></svg></span>
-                <h3 class="sec-feature-title">For IT and security reviewers</h3>
-                <p class="sec-feature-text">The For IT page documents how CivicRecordsOnline handles agency data, in one place:</p>
-                <ul class="sec-checks">
-                    <li>Azure hosting in US regions</li>
-                    <li>Encryption at rest and in transit</li>
-                    <li>Data retention</li>
-                    <li>Data export</li>
-                    <li>Subprocessors</li>
-                </ul>
-                <a href="https://www.civicrecordsonline.com/for-it" class="btn btn-primary">Read the For IT page<span class="arrow" aria-hidden="true">&rarr;</span></a>
-            </article>
+        <ul class="badges" aria-label="Security at a glance">
+                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 17.5h2"/><path d="m9.5 10 1.8 1.8 3.2-3.3"/></svg></span>Two-step sign-in</li>
+                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><path d="M12 14.5v2.5"/></svg></span>AES-256 at rest</li>
+                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13"/><path d="m14 5 3 3-3 3"/><path d="M20 16H7"/><path d="m10 13-3 3 3 3"/></svg></span>TLS 1.2+ in transit</li>
+                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 18.5a4.5 4.5 0 0 1-.4-9 5.5 5.5 0 0 1 10.6 1.5 3.75 3.75 0 0 1-.2 7.5z"/></svg></span>Microsoft Azure, US</li>
+                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4.5 6h.01"/><path d="M4.5 12h.01"/><path d="M4.5 18h.01"/></svg></span>Protected audit trail</li>
+                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.25"/><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"/><path d="M16 5.2a3.25 3.25 0 0 1 0 6.3"/><path d="M17.5 14.2a5.5 5.5 0 0 1 3 5.3"/></svg></span>Role-based access</li>
+        </ul>
 
-            <ul class="sec-links">
-                <li class="sec-link">
-                    <span class="sec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></span>
-                    <div>
-                        <h3 class="sec-link-title">Security questions</h3>
-                        <p class="sec-link-text">Send questionnaires or technical questions about CivicRecordsOnline.</p>
-                        <a href="mailto:security@civicrecordsonline.com" class="resource-link resource-link-mail">security@civicrecordsonline.com</a>
-                    </div>
-                </li>
-                <li class="sec-link">
-                    <span class="sec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.3 7.5 9.5 4.3-1.2 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
-                    <div>
-                        <h3 class="sec-link-title">Vulnerability disclosure</h3>
-                        <p class="sec-link-text">How to report a security issue, and what happens after you do.</p>
-                        <a href="https://www.civicrecordsonline.com/security" class="resource-link">Read the disclosure policy<span class="arrow" aria-hidden="true">&rarr;</span></a>
-                    </div>
-                </li>
-            </ul>
+        <div class="sec-card">
+            <div class="sec-grid">
+                <article class="sec-cell">
+                    <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m10.8 12.2 8.7-8.7"/><path d="m16.5 6.5 2.5 2.5"/><path d="m14 9 2 2"/></svg></span>
+                    <h3 class="sec-cell-title">Sign-in and access</h3>
+                    <p>Two-step sign-in with an authenticator app and one-time backup codes. Each agency can make it required.</p>
+                    <p>Microsoft or Google work-account sign-in on every plan.</p>
+                    <p>Passwords of 10 or more characters, and accounts lock after 10 failed attempts.</p>
+                </article>
+                <article class="sec-cell">
+                    <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><path d="M12 14.5v2.5"/></svg></span>
+                    <h3 class="sec-cell-title">Encryption</h3>
+                    <p>Databases and files are encrypted at rest with AES-256, using Azure SQL and Azure Storage encryption.</p>
+                    <p>Every connection is HTTPS only, with TLS 1.2 as the minimum version.</p>
+                </article>
+                <article class="sec-cell">
+                    <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="7" rx="1.5"/><rect x="3.5" y="13" width="17" height="7" rx="1.5"/><path d="M7.5 7.5h.01"/><path d="M7.5 16.5h.01"/></svg></span>
+                    <h3 class="sec-cell-title">Hosting and backups</h3>
+                    <p>Runs on Microsoft Azure in the United States.</p>
+                    <p>Database backups are kept for 35 days and copied to a second Azure region.</p>
+                </article>
+                <article class="sec-cell">
+                    <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span>
+                    <h3 class="sec-cell-title">Agency separation and roles</h3>
+                    <p>Each agency's records are kept apart from every other agency's.</p>
+                    <p>Staff see only what their role and department allow.</p>
+                </article>
+                <article class="sec-cell">
+                    <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4.5 6h.01"/><path d="M4.5 12h.01"/><path d="M4.5 18h.01"/></svg></span>
+                    <h3 class="sec-cell-title">Audit trail</h3>
+                    <p>Every action on a request is recorded, and audit entries are protected from editing or deletion.</p>
+                    <p>Administrators can export the full history, with the records, as a ZIP file.</p>
+                </article>
+                <article class="sec-cell">
+                    <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12s3.5-6.5 9-6.5 9 6.5 9 6.5-3.5 6.5-9 6.5S3 12 3 12z"/><circle cx="12" cy="12" r="2.75"/><path d="M4 20 20 4"/></svg></span>
+                    <h3 class="sec-cell-title">Privacy</h3>
+                    <p>No generative AI. Agency files are never sent to an AI service.</p>
+                    <p>We do not sell personal information.</p>
+                </article>
+            </div>
+            <div class="sec-foot">
+                <div class="sec-foot-copy">
+                    <h3 class="sec-foot-title">Security questions? Answered.</h3>
+                    <p>Read the documentation, send a questionnaire, or report a vulnerability.</p>
+                </div>
+                <div class="sec-foot-actions">
+                    <a href="https://www.civicrecordsonline.com/for-it" class="btn btn-primary">Read the For IT page<span class="arrow" aria-hidden="true">&rarr;</span></a>
+                    <a href="mailto:security@civicrecordsonline.com" class="sec-foot-link"><span class="sec-foot-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></span>security@civicrecordsonline.com</a>
+                    <a href="https://www.civicrecordsonline.com/security" class="sec-foot-link"><span class="sec-foot-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.3 7.5 9.5 4.3-1.2 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg></span>Vulnerability disclosure policy</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
