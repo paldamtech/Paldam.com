@@ -1,0 +1,65 @@
+name: Deploy to Azure Static Web Apps
+
+# Runs only when a published file changes on main (or by hand). No pull
+# request runs: the Actions budget is tight and the checks below are cheap
+# enough to run on the deploy itself.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - '404.html'
+      - 'css/**'
+      - 'js/**'
+      - '.well-known/**'
+      - '*.png'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'staticwebapp.config.json'
+      - '.github/workflows/deploy-azure.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      # Publish an explicit list of files, so repository files such as
+      # CNAME, .github and any local notes never reach the site.
+      - name: Assemble the site
+        run: |
+          mkdir _site
+          cp -r index.html 404.html css js .well-known favicon.png icon.png icon_white.png wordmark.png robots.txt sitemap.xml staticwebapp.config.json _site/
+
+      - name: Check the site before publishing
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('_site/staticwebapp.config.json','utf8'))"
+          if grep -rl '<!--' _site --include='*.html'; then
+            echo "::error::HTML comments must not ship. Remove them from the files listed above."
+            exit 1
+          fi
+          if grep -rl '/\*' _site/css _site/js; then
+            echo "::error::CSS and JS comments must not ship. Remove them from the files listed above."
+            exit 1
+          fi
+
+      # The repository holds only this one site's deployment token, not Azure
+      # sign-in credentials, so nothing in this workflow can reach any other
+      # Azure resource. Same CLI and pin as the CivicRecordsOnline marketing
+      # site deploy.
+      - name: Deploy to Azure Static Web Apps
+        env:
+          SWA_TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+        run: >-
+          npx -y @azure/static-web-apps-cli@2.0.9 deploy _site
+          --deployment-token "$SWA_TOKEN"
+          --env production
