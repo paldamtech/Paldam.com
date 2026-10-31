@@ -316,12 +316,12 @@ h2 {
     height: 18px;
     border-radius: 50%;
     background:
-        url("/img/check-indigo.svg?v=20261031d") center / 11px no-repeat,
+        url("/img/check-indigo.svg?v=20261031e") center / 11px no-repeat,
         rgba(119, 117, 231, .18);
 }
 .panel-back .panel-list li::before {
     background:
-        url("/img/check-cyan.svg?v=20261031d") center / 11px no-repeat,
+        url("/img/check-cyan.svg?v=20261031e") center / 11px no-repeat,
         rgba(69, 198, 192, .14);
 }
 .panel-foot {
@@ -359,8 +359,19 @@ h2 {
 
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--s-5);
+}
+@media (min-width: 1080px) {
+    .products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .products .product { padding: var(--s-6) var(--s-6) var(--s-5); }
+    .products .product-name { font-size: 1.5rem; }
+    .products .product-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--s-4);
+        margin-bottom: var(--s-3);
+    }
 }
 .product {
     position: relative;
@@ -383,11 +394,12 @@ h2 {
 }
 .product-cro { --glow: rgba(119, 117, 231, .09); --tone: var(--accent-ink); --tone-tint: var(--accent-tint); }
 .product-paydam { --glow: rgba(69, 198, 192, .10); --tone: var(--cyan-ink); --tone-tint: var(--cyan-tint); }
-.product:hover {
+.product-ta { --glow: rgba(89, 101, 121, .07); --tone: #475569; --tone-tint: var(--light); }
+.product:not(.product-static):hover {
     border-color: #ccd4e1;
     box-shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 20px 44px -20px rgba(16, 24, 40, .22);
 }
-.product:hover .arrow { transform: translateX(3px); }
+.product:not(.product-static):hover .arrow { transform: translateX(3px); }
 .product-top {
     position: relative;
     display: flex;
@@ -406,6 +418,23 @@ h2 {
     border: 1px solid var(--border-light);
 }
 .product-logo img { width: 40px; height: 40px; object-fit: contain; }
+.product-logo-icon { color: #475569; }
+.product-status {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: 28px;
+    font-size: .9375rem;
+    font-weight: 600;
+    color: #475569;
+}
+.product-status::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #94a3b8;
+}
 .product-cat {
     font-size: .8125rem;
     font-weight: 600;
