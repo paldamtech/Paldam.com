@@ -74,11 +74,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/style.css?v=20261031k" />
+    <link rel="stylesheet" href="/css/style.css?v=20261101c" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNQLX96MKZ"></script>
-    <script src="/js/analytics.js?v=20261031k"></script>
-    <script src="/js/deck.js?v=20261031k" defer></script>
+    <script src="/js/analytics.js?v=20261101c"></script>
+    <script src="/js/deck.js?v=20261101c" defer></script>
+    <script src="/js/interact.js?v=20261101c" defer></script>
 </head>
 <body>
 
@@ -196,7 +197,7 @@
             <p class="section-lede">Each product is built to solve a specific operational problem.</p>
         </div>
 
-        <div class="products">
+        <div class="products" data-reveal>
             <article class="product product-cro">
                 <div class="product-top">
                     <span class="product-logo"><img src="/img/cro-mark.png" alt="" width="40" height="40" /></span>
@@ -263,49 +264,49 @@
             </p>
         </div>
 
-        <ul class="badges" aria-label="Security at a glance">
-                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 17.5h2"/><path d="m9.5 10 1.8 1.8 3.2-3.3"/></svg></span>Two-step sign-in</li>
-                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><path d="M12 14.5v2.5"/></svg></span>AES-256 at rest</li>
-                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13"/><path d="m14 5 3 3-3 3"/><path d="M20 16H7"/><path d="m10 13-3 3 3 3"/></svg></span>TLS 1.2+ in transit</li>
-                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 18.5a4.5 4.5 0 0 1-.4-9 5.5 5.5 0 0 1 10.6 1.5 3.75 3.75 0 0 1-.2 7.5z"/></svg></span>Microsoft Azure, US</li>
-                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4.5 6h.01"/><path d="M4.5 12h.01"/><path d="M4.5 18h.01"/></svg></span>Protected audit trail</li>
-                <li class="badge"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.25"/><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"/><path d="M16 5.2a3.25 3.25 0 0 1 0 6.3"/><path d="M17.5 14.2a5.5 5.5 0 0 1 3 5.3"/></svg></span>Role-based access</li>
+        <ul class="badges" aria-label="Security at a glance" data-reveal>
+                <li><a class="badge" href="#sec-signin"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 17.5h2"/><path d="m9.5 10 1.8 1.8 3.2-3.3"/></svg></span>Two-step sign-in<span class="badge-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></svg></span></a></li>
+                <li><a class="badge" href="#sec-encryption"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><path d="M12 14.5v2.5"/></svg></span>AES-256 at rest<span class="badge-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></svg></span></a></li>
+                <li><a class="badge" href="#sec-encryption"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13"/><path d="m14 5 3 3-3 3"/><path d="M20 16H7"/><path d="m10 13-3 3 3 3"/></svg></span>TLS 1.2+ in transit<span class="badge-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></svg></span></a></li>
+                <li><a class="badge" href="#sec-hosting"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 18.5a4.5 4.5 0 0 1-.4-9 5.5 5.5 0 0 1 10.6 1.5 3.75 3.75 0 0 1-.2 7.5z"/></svg></span>Microsoft Azure, US<span class="badge-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></svg></span></a></li>
+                <li><a class="badge" href="#sec-audit"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4.5 6h.01"/><path d="M4.5 12h.01"/><path d="M4.5 18h.01"/></svg></span>Protected audit trail<span class="badge-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></svg></span></a></li>
+                <li><a class="badge" href="#sec-roles"><span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.25"/><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"/><path d="M16 5.2a3.25 3.25 0 0 1 0 6.3"/><path d="M17.5 14.2a5.5 5.5 0 0 1 3 5.3"/></svg></span>Role-based access<span class="badge-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></svg></span></a></li>
         </ul>
 
         <div class="sec-card">
-            <div class="sec-grid">
-                <article class="sec-cell">
+            <div class="sec-grid" data-reveal>
+                <article class="sec-cell" id="sec-signin">
                     <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m10.8 12.2 8.7-8.7"/><path d="m16.5 6.5 2.5 2.5"/><path d="m14 9 2 2"/></svg></span>
                     <h3 class="sec-cell-title">Sign-in and access</h3>
                     <p>Two-step sign-in with an authenticator app and one-time backup codes. Each agency can make it required.</p>
                     <p>Microsoft or Google work-account sign-in on every plan.</p>
                     <p>Passwords of 10 or more characters, and accounts lock after 10 failed attempts.</p>
                 </article>
-                <article class="sec-cell">
+                <article class="sec-cell" id="sec-encryption">
                     <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><path d="M12 14.5v2.5"/></svg></span>
                     <h3 class="sec-cell-title">Encryption</h3>
                     <p>Databases and files are encrypted at rest with AES-256, using Azure SQL and Azure Storage encryption.</p>
                     <p>Every connection is HTTPS only, with TLS 1.2 as the minimum version.</p>
                 </article>
-                <article class="sec-cell">
+                <article class="sec-cell" id="sec-hosting">
                     <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="7" rx="1.5"/><rect x="3.5" y="13" width="17" height="7" rx="1.5"/><path d="M7.5 7.5h.01"/><path d="M7.5 16.5h.01"/></svg></span>
                     <h3 class="sec-cell-title">Hosting and backups</h3>
                     <p>Runs on Microsoft Azure in the United States.</p>
                     <p>Database backups are kept for 35 days and copied to a second Azure region.</p>
                 </article>
-                <article class="sec-cell">
+                <article class="sec-cell" id="sec-roles">
                     <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span>
                     <h3 class="sec-cell-title">Agency separation and roles</h3>
                     <p>Each agency's records are kept apart from every other agency's.</p>
                     <p>Staff see only what their role and department allow.</p>
                 </article>
-                <article class="sec-cell">
+                <article class="sec-cell" id="sec-audit">
                     <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4.5 6h.01"/><path d="M4.5 12h.01"/><path d="M4.5 18h.01"/></svg></span>
                     <h3 class="sec-cell-title">Audit trail</h3>
                     <p>Every action on a request is recorded, and audit entries are protected from editing or deletion.</p>
                     <p>Administrators can export the full history, with the records, as a ZIP file.</p>
                 </article>
-                <article class="sec-cell">
+                <article class="sec-cell" id="sec-privacy">
                     <span class="sec-cell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12s3.5-6.5 9-6.5 9 6.5 9 6.5-3.5 6.5-9 6.5S3 12 3 12z"/><circle cx="12" cy="12" r="2.75"/><path d="M4 20 20 4"/></svg></span>
                     <h3 class="sec-cell-title">Privacy</h3>
                     <p>No generative AI. Agency files are never sent to an AI service.</p>
@@ -338,17 +339,17 @@
                 designed around specific, practical tasks.
             </p>
         </div>
-        <dl class="principles">
+        <dl class="principles" data-reveal>
             <div class="principle">
-                <dt>Focused products</dt>
+                <dt><span class="principle-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.75"/><circle cx="12" cy="12" r="1"/></svg></span><span>Focused products</span></dt>
                 <dd>Each product is built around a clearly defined task.</dd>
             </div>
             <div class="principle">
-                <dt>Transparent pricing</dt>
+                <dt><span class="principle-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1.4 1.4 0 0 1 0 2l-6.7 6.7a1.4 1.4 0 0 1-2 0z"/><circle cx="8.25" cy="8.25" r="1.5"/></svg></span><span>Transparent pricing</span></dt>
                 <dd>Pricing for released products is published on their own websites.</dd>
             </div>
             <div class="principle">
-                <dt>Privacy-conscious design</dt>
+                <dt><span class="principle-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.3 7.5 9.5 4.3-1.2 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg></span><span>Privacy-conscious design</span></dt>
                 <dd>We collect the information needed to operate our products and do not sell personal information.</dd>
             </div>
         </dl>
